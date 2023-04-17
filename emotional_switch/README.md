@@ -12,5 +12,5 @@ By Darren Cusdin
 ## Demo
 
 <video width="320" height="240" controls>
-  <source src="https://github.com/vanlooverenkoen/flutter_playground/blob/micro-interactions/emotional_switch/emotional_switch/assets/demo.mp4" type="video/mp4">
+  <source src="https://github.com/vanlooverenkoen/flutter_playground/blob/micro-interactions/emotional_switch/emotional_switch/assets/demo.mp4?raw=true" type="video/mp4"/>
 </video>

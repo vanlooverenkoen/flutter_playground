@@ -17,6 +17,8 @@ class _Animated3DCarState extends State<Animated3DCar> {
   late int _start;
   late double _amountOfFrames;
 
+  late ImageSequenceAnimatorState _imageSequenceAnimator;
+
   @override
   void initState() {
     _start = 1;
@@ -33,7 +35,8 @@ class _Animated3DCarState extends State<Animated3DCar> {
     if (oldWidget.animationType == CarAnimationType.topView && widget.animationType == CarAnimationType.topViewOpen) {
       _start = 180;
       _amountOfFrames = 60;
-    } else if ((oldWidget.animationType == CarAnimationType.topView || oldWidget.animationType == CarAnimationType.topViewOpen) && widget.animationType == CarAnimationType.sideView) {
+    } else if ((oldWidget.animationType == CarAnimationType.topView || oldWidget.animationType == CarAnimationType.topViewOpen) &&
+        widget.animationType == CarAnimationType.sideView) {
       _start = 240;
       _amountOfFrames = 60;
     } else if (widget.animationType == CarAnimationType.sideView) {
@@ -43,6 +46,7 @@ class _Animated3DCarState extends State<Animated3DCar> {
       _start = 120;
       _amountOfFrames = 60;
     }
+    _imageSequenceAnimator.restart();
     super.didUpdateWidget(oldWidget);
   }
 
@@ -55,9 +59,14 @@ class _Animated3DCarState extends State<Animated3DCar> {
       3,
       "png",
       _amountOfFrames,
-      key: ValueKey(_start),
       fps: 60,
+      waitUntilCacheIsComplete: true,
+      onReadyToPlay: _onReadyToPlay,
     );
+  }
+
+  void _onReadyToPlay(ImageSequenceAnimatorState imageSequenceAnimator) {
+    _imageSequenceAnimator = imageSequenceAnimator;
   }
 }
 

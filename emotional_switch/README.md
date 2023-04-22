@@ -12,4 +12,4 @@ By Darren Cusdin
 ## Demo
 
 
-![Demo video](https://github.com/vanlooverenkoen/flutter_playground/blob/master/emotional_switch/assets/demo.gif?raw=true)
+![Demo video](https://github.com/vanlooverenkoen/flutter_playground/blob/master/emotional_switch/repo_assets/demo.gif?raw=true)

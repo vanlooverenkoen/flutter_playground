@@ -15,4 +15,4 @@ A concept app for a car. The car is a 3D model that is transformed to an image s
 
 ## Demo
 
-![Demo video](https://github.com/vanlooverenkoen/flutter_playground/blob/master/car_3d/assets/demo.gif?raw=true)
+![Demo video](https://github.com/vanlooverenkoen/flutter_playground/blob/master/car_3d/repo_assets/demo.gif?raw=true)

@@ -14,6 +14,7 @@ class _PasswordFieldState extends State<PasswordField> {
   static const _accentColor = Color(0xFF5759C6);
   static const _accentDarkColor = Color(0xFF111727);
   static const _animationDuration = Duration(milliseconds: 200);
+
   final _key = GlobalKey();
   late FocusNode _focusNode;
   late TextEditingController _textController;
@@ -43,18 +44,20 @@ class _PasswordFieldState extends State<PasswordField> {
       key: _key,
       controller: _textController,
       focusNode: _focusNode,
-      style: const TextStyle(
+      style: TextStyle(
         color: _accentColor,
-        fontSize: 16,
-        fontWeight: FontWeight.normal,
+        fontWeight: _showHiddenUi || _textController.text.isEmpty ? FontWeight.normal : FontWeight.bold,
       ),
       obscureText: !_showHiddenUi,
       cursorColor: _accentColor,
+      onChanged: _onChanged,
       decoration: const InputDecoration(
         contentPadding: EdgeInsets.zero,
         isDense: true,
-        hintText: 'Enter password',
-        hintStyle: TextStyle(color: Color(0xFF8C8C8C)),
+        hintText: 'Password',
+        hintStyle: TextStyle(
+          color: Color(0xFF8C8C8C),
+        ),
         border: InputBorder.none,
       ),
     );
@@ -156,4 +159,6 @@ class _PasswordFieldState extends State<PasswordField> {
       });
     }
   }
+
+  void _onChanged(String value) => setState(() {});
 }

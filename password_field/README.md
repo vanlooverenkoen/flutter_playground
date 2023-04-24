@@ -1,16 +1,15 @@
 # password_field
 
-A new Flutter project.
+A toggle to show/hide your password can be handy. But can we make it fun?
 
-## Getting Started
+## Used resources:
 
-This project is a starting point for a Flutter application.
+- [phosphor_flutter](https://pub.dev/packages/phosphor_flutter)
 
-A few resources to get you started if this is your first Flutter project:
+## Inspiration
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+[https://tinyspark.io/blog/micro-interactions-things-that-make-you-go-oohhhh/](https://tinyspark.io/blog/micro-interactions-things-that-make-you-go-oohhhh/)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Demo
+
+![Demo video](https://github.com/vanlooverenkoen/flutter_playground/blob/master/password_field/repo_assets/demo.gif?raw=true)
